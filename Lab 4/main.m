@@ -31,15 +31,14 @@ hold off;
 
 
 %2 Design the controller
-k_c = 5;
 alpha = 10;
 T = .01;
-c_num = k_c * alpha * [T 1];
+c_num = alpha * [T 1];
 c_den = [alpha * T 1];
 c = tf(c_num, c_den)
 sys = series(c,p);
 figure(2)
-rlocus(sys)
+rlocus(sys, 0:.1:10)
 title('Root Locus of the Plant With Controller');
 hold on;
 omega_vec = -.1:-.1:-10;
@@ -49,8 +48,10 @@ plot(-omega_n*damping*ones(1,11),(-5:1:5),'r');
 hold off;
 
 %3 Step Response
-sys_fb = feedback(sys,1)
+k_c = 5;
+sys_fb = feedback(k_c * sys,1)
 figure(3);
+step(sys_fb);
 step_resp = step(sys_fb);
 title('Step Response');
 Mp = max(step_resp)-1
