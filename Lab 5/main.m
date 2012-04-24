@@ -58,15 +58,19 @@ num = [1 20 100];
 den = [1 0 0 0];
 sys = tf(k*num, den);
 figure(6);
-bode(sys);
+nyquist(sys);
+title('Nyquist Diagram (K=7)')
+figure(7);
 margin(sys);
 
 k = 4;
 sys = tf(k*num, den);
-figure(7);
-bode(sys);
+figure(8);
+nyquist(sys);
+title('Nyquist Diagram (K=4)')
+figure(9);
 margin(sys);
 
 sys = tf(num, den);
-figure(8);
+figure(10);
 rlocus(sys);
