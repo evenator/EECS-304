@@ -21,8 +21,10 @@ lp = 90;
 numG = [kd kp ki];
 denG = [1/lp 1 0];
 
-%Run Simulation
-sim('helicopter1');
+G = tf(numG, denG);
 
-%Calculate Score
-[components, J] = cf(t, u, r, y)
+figure(1)
+margin(G)
+
+figure(2)
+nyquist(G);
