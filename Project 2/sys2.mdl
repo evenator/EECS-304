@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.18"
+    ComputedModelVersion    "1.19"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -26,9 +26,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Edward"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Apr 29 13:31:19 2012"
+  LastModifiedDate	  "Sun Apr 29 13:40:20 2012"
   RTWModifiedTimeStamp	  257598767
-  ModelVersionFormat	  "1.%<AutoIncrement:18>"
+  ModelVersionFormat	  "1.%<AutoIncrement:19>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -764,6 +764,7 @@ Model {
       Name		      "Disturbance"
       SID		      "15"
       Position		      [460, 205, 490, 235]
+      After		      "0"
       SampleTime	      "0"
     }
     Block {
@@ -822,7 +823,7 @@ Model {
       Position		      [605, 139, 635, 171]
       Floating		      off
       Location		      [569, 294, 1266, 870]
-      Open		      on
+      Open		      off
       NumInputPorts	      "1"
       ZoomMode		      "yonly"
       List {
