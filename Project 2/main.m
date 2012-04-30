@@ -21,6 +21,5 @@ margin(p);
 figure(2);
 rlocus(p);
 
-input = step_in;
-case1;
+%case1;
 case2;
